@@ -1,0 +1,24 @@
+<!doctype html>
+<title>Results</title>
+<body>
+<body style="background-color:silver;">
+{% with messages = get_flashed_messages() %}
+   {% if messages %}
+      {% for message in messages %}
+         {{ message }}
+      {% endfor %}
+   {% endif %}
+{% endwith %}
+<center><h2>Top five labels for your image</h2>
+<table cellpadding="5">
+<thead><tr><th>Predicted Label</th>
+<th>Confidence Score</th></tr></thead>
+<tbody>
+<tr><td>{{labels[0]}}</td><td>{{scores[0]}}</td></tr>
+<tr><td>{{labels[1]}}</td><td>{{scores[1]}}</td></tr>
+<tr><td>{{labels[2]}}</td><td>{{scores[2]}}</td></tr>
+<tr><td>{{labels[3]}}</td><td>{{scores[3]}}</td></tr>
+<tr><td>{{labels[4]}}</td><td>{{scores[4]}}</td></tr>
+</tbody>
+</table></center>
+</body>

@@ -1,0 +1,21 @@
+<!doctype html>
+<title>Upload New File</title>
+<body>
+<body style="background-color:silver;">
+{% with messages = get_flashed_messages() %}
+   {% if messages %}
+      {% for message in messages %}
+         {{ message }}
+      {% endfor %}
+   {% endif %}
+{% endwith %}
+<center><h2>Image Label Extractor</h2>
+<h4>Choose a file to upload</h4>
+<h4>(max file size: 10mb)</h4>
+<h5>Powered by Google Vision</h5>
+<form method=post enctype=multipart/form-data>
+  <input type=file name=file>
+  <input type=submit value=Upload>
+</form>
+<p>Supported filetypes: .png .jpg .jpeg .gif .bmp .webp .raw .ico .pdf .tiff</p></center>
+</body>
