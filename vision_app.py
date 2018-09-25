@@ -71,7 +71,7 @@ def request_labels(image):
                                 }]
                    }
     res = requests.post(ENDPOINT_URL,
-                             data=json.dumps(img_request),
-                             params={'key': API_KEY},
-                             headers={'Content-Type': 'application/json'})
+                             data = json.dumps(img_request),
+                             params = {'key': API_KEY},
+                             headers = {'Content-Type': 'application/json'})
     return (res.json())
